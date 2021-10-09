@@ -1,0 +1,162 @@
+:root {
+  --color-white: #fff;
+  --color-dark-blue: hsl(221, 14%, 31%);
+  --color-blue-reset: #5f939a;
+  --color-red: hsl(6, 63%, 50%); }
+
+/* RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /*every element will automatically inherit the body's box-sizing*/ }
+
+html {
+  /* font-size: 10px; /*instead of the deafault browser 16px --> now 1rem = 10px*/
+  font-size: 62.5%;
+  /* equals to 10px if setting are normal but will change according to users needs*/ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: #3a4764;
+  height: 100vh;
+  position: relative;
+  font-family: 'Spartan', sans-serif; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+.container {
+  height: 82vh;
+  width: 30vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; }
+
+.header {
+  color: var(--color-white);
+  height: 8.5rem;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, min-content);
+  grid-column-gap: 3rem;
+  align-items: center; }
+  .header__heading--h1 {
+    font-size: 5rem; }
+  .header__heading--h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem; }
+  .header__heading--h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2.1rem;
+    margin-left: 1rem; }
+  .header__theme-picker {
+    display: flex;
+    flex-direction: column; }
+  .header__shape {
+    background-color: #232c43;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center; }
+  .header__circle {
+    background-color: var(--color-red);
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 100%; }
+
+.screen {
+  background-color: #182034;
+  padding: 5.5rem 4.5rem;
+  border-radius: 15px; }
+  .screen__number {
+    color: var(--color-white);
+    font-size: 6rem;
+    float: right; }
+
+.calculator {
+  background-color: #232c43;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 15px;
+  padding: 2.5rem;
+  text-align: center; }
+  .calculator__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.5rem; }
+    .calculator__grid--key {
+      border: none;
+      color: var(--color-dark-blue);
+      background-color: #eae3dc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      border-radius: 10px;
+      padding: 1.3rem 0;
+      font-family: inherit;
+      transition: all 0.1s; }
+      .calculator__grid--key:not(.calculator__grid--key-del) {
+        box-shadow: 0 2.5px 0 #b4a597; }
+      .calculator__grid--key:hover:not(.calculator__grid--key-del) {
+        cursor: pointer;
+        background-color: #fdfcfc; }
+      .calculator__grid--key:active {
+        transform: translateY(-8px) scale(1.01); }
+      .calculator__grid--key-del {
+        background-color: var(--color-blue-reset);
+        color: var(--color-white);
+        font-size: 1.7rem;
+        box-shadow: 0 2.5px 0 #1b5f65; }
+        .calculator__grid--key-del:hover, .calculator__grid--key-del:active {
+          cursor: pointer;
+          color: var(--color-dark-blue); }
+  .calculator__flex {
+    display: flex;
+    gap: 2.5rem; }
+    .calculator__flex--key {
+      background-color: #eae3dc;
+      font-size: 1.7rem;
+      color: var(--color-white);
+      flex: 50%;
+      border-radius: 10px;
+      padding: 1.3rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-family: inherit;
+      transition: all 0.1s; }
+      .calculator__flex--key:hover {
+        cursor: pointer;
+        color: var(--color-dark-blue); }
+      .calculator__flex--key:active {
+        transform: translateY(-8px) scale(1.01); }
+      .calculator__flex--key-reset {
+        background-color: var(--color-blue-reset);
+        box-shadow: 0 2.5px 0 #1b5f65; }
+      .calculator__flex--key-equals {
+        background-color: var(--color-red);
+        font-size: 2.2rem;
+        box-shadow: 0 2.5px 0 #93261a; }

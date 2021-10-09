@@ -1,26 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__heading--h1">calc</h1>
+        <h2 class="header__heading--h2">THEME</h2>
+        <div class="header__theme-picker">
+          <h3 class="header__heading--h3">123</h3>
+          <div class="header__shape">
+            <div class="header__circle header__circle--1"></div>
+            <div class="header__circle header__circle--2"></div>
+            <div class="header__circle header__circle--3"></div>
+          </div>
+        </div>
+      </header>
+      <div class="screen">
+        <p class="screen__number">399,981</p>
+      </div>
+      <div class="calculator">
+        <div class="calculator__grid">
+          <button class="calculator__grid--key calculator__grid--key-7">
+            7
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-8">
+            8
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-9">
+            9
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-del">
+            DEL
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-4">
+            4
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-5">
+            5
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-6">
+            6
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-plus">
+            +
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-1">
+            1
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-2">
+            2
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-3">
+            3
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-minus">
+            -
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-point">
+            .
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-zero">
+            0
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-divide">
+            /
+          </button>
+          <button class="calculator__grid--key calculator__grid--key-multiply">
+            x
+          </button>
+        </div>
+        <div class="calculator__flex">
+          <button class="calculator__flex--key calculator__flex--key-reset">
+            RESET
+          </button>
+          <button class="calculator__flex--key calculator__flex--key-equals">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
+-
